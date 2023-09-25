@@ -2,9 +2,8 @@
 Problema:  
 Facilitare il calcolo dei voti dei calciatori con i vari bonus (gol, assist) e malus (ammonizioni, espulsioni) per sommarli e scoprire la squadra vincente. Sucessivamente calcolare la calssifica totale e conoscere il vincitore del campionato.  (ispirato a fantamaster).
 Elenco funzionlità:  
--registra un campionato (personalizzazione nome)  
+-registra un campionato (personalizzazione nome e budget per squadra)  
 -registra una squadra (personalizzazione nome e colori sociali)  
--budget di crediti per squadra  
 -mercato (inserimento giocatori nelle squadre)  
 -punteggio giocatore  
 -punteggio totale di squadra  
