@@ -1,6 +1,6 @@
 # FantaLabo
 Elenco funzionalità:
--registra un campionato
+-registra un campionato<br/>
 -registra una squdra (personalizzazione nome e colori sociali)
 -budget di crediti per squadra 
 -mercato (inserimento giocatori nelle squadre)
