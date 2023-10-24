@@ -14,3 +14,5 @@ Aiutare gli appasionati di calcio che vogliono creare un campionato di fantacalc
 -classifica statistiche giocatori (gol, assist, g/a, ammonizioni, espulsioni)
 # TARGET
 appasionati di calcio
+# SCHEMA E/R
+![alt text](diagrammaER.png)
