@@ -15,7 +15,6 @@ Aiutare gli appasionati di calcio che vogliono creare un campionato di fantacalc
 # TARGET
 appasionati di calcio
 # SCHEMA E/R
-![alt text](diagrammaER.png)
 # SCHEMA RELAZIONALE (copiare dal q)
 
 # MOKUP
