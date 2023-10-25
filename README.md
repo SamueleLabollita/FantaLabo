@@ -16,6 +16,12 @@ Aiutare gli appasionati di calcio che vogliono creare un campionato di fantacalc
 appasionati di calcio
 # SCHEMA E/R
 ![alt text](diagrammaE_R.png)
-# SCHEMA RELAZIONALE (copiare dal q)
+# SCHEMA RELAZIONALE
+giocatore(<ins>id_giocatore</ins>, nome, cognome, ruolo, nazione, gol, assist, sostituito, subentrato, ammonizione, espulso, SQUADRA_nome_squadra)
 
+squadra(<ins>nome_squadra</ins>, budget, colori, stemma, PARTECIPANTE_email, CAMPIONATO_nome_campionato)
+
+campionato(<ins>nome_campionato</ins>, partite_giocate, n_squadre)
+
+partecipante(<ins>email</ins>, nome, cognome, password)
 # MOKUP
