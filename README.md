@@ -28,15 +28,19 @@ partecipante(<ins>email</ins>, nome, cognome, password)
 schermata principale
 
 ![alt text](principale.jpg)
+
 Schermata inserimento giocatori
 
 ![alt text](inserimentoGiocatori.PNG)
+
 Schermata partita
 
 ![alt text](partita.jpg)
+
 schermata risultati
 
 ![alt text](risultati.jpg)
+
 schermata classifica
 
 ![alt text](classifica.jpg)
