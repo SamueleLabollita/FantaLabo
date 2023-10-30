@@ -15,7 +15,7 @@ Aiutare gli appasionati di calcio che vogliono creare un campionato di fantacalc
 # TARGET
 appasionati di calcio
 # SCHEMA E/R
-![alt text](schemaER.png)
+![alt text](ER.png)
 # SCHEMA RELAZIONALE
 giocatore(<ins>id_giocatore</ins>, nome, cognome, ruolo, nazione, gol, assist, sostituito, subentrato, ammonizione, espulso, SQUADRA_nome_squadra)
 
