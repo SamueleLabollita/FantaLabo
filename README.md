@@ -28,7 +28,7 @@ partecipante(<ins>email</ins>, nome, cognome, password)
 schermata principale
 ![alt text](principale.jpg)
 Schermata inserimento giocatori
-![alt text](inserimentoGiocatori.png)
+![alt text](inserimentoGiocatori.PNG)
 Schermata partita
 ![alt text](partita.jpg)
 schermata risultati
