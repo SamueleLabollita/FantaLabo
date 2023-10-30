@@ -21,7 +21,7 @@ giocatore(<ins>id_giocatore</ins>, nome, cognome, ruolo, nazione, gol, assist, s
 
 squadra(<ins>nome_squadra</ins>, budget, colori, stemma, PARTECIPANTE_email, CAMPIONATO_nome_campionato)
 
-campionato(<ins>nome_campionato</ins>, partite_giocate, n_squadre)
+campionato(<ins>nome_campionato</ins>, partite_giocate, n_squadre, classifica)
 
 partecipante(<ins>email</ins>, nome, cognome, password)
 # MOKUP
