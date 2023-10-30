@@ -25,8 +25,13 @@ campionato(<ins>nome_campionato</ins>, partite_giocate, n_squadre)
 
 partecipante(<ins>email</ins>, nome, cognome, password)
 # MOKUP
+schermata principale
 ![alt text](principale.jpg)
+Schermata inserimento giocatori
 ![alt text](inserimentoGiocatori.png)
+Schermata partita
 ![alt text](partita.jpg)
+schermata risultati
 ![alt text](risultati.jpg)
+schermata classifica
 ![alt text](classifica.jpg)
