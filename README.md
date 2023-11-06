@@ -7,7 +7,7 @@ Aiutare gli appasionati di calcio che vogliono creare un campionato di fantacalc
 -registra un campionato (personalizzazione nome e budget per squadra)  
 -registra una squadra (personalizzazione nome e colori sociali)  
 -mercato (inserimento giocatori nelle squadre)  
--punteggio giocatore  
+-voto giocatore  
 -punteggio totale di squadra  
 -calendario partite  
 -classifica (3pt vittoria; 1pt pareggio; 0pt sconfitta)  
