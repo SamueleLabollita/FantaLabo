@@ -16,7 +16,7 @@ Aiutare gli appasionati di calcio che vogliono creare un campionato di fantacalc
 appasionati di calcio
 # SCHEMA E/R
 ![alt text](ER.png)
-# SCHEMA RELAZIONALE DA CAMBIARE
+# SCHEMA RELAZIONALE
 
 # MOKUP
 schermata principale
