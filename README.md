@@ -31,21 +31,20 @@ PARTITA(<ins>id</ins>, squadra_casa, squadra_ospite, gol, assist, ammonizioni, e
 # MOKUP
 schermata principale
 
-![alt text](principale.jpg)
+![image](https://github.com/SamueleLabollita/FantaLabo/assets/101709291/99130e94-0e9b-4d41-8633-e6ffac0cec5f)
 
 Schermata inserimento giocatori
 
-![alt text](inserimentoGiocatori.PNG)
+![image](https://github.com/SamueleLabollita/FantaLabo/assets/101709291/0cb1fe5d-6ac2-4418-a4c4-90d985c32e24)
 
 Schermata partita
 
-![alt text](partita.jpg)
+![image](https://github.com/SamueleLabollita/FantaLabo/assets/101709291/5baf6509-ff00-42c0-a8ba-5a846f2c266f)
 
 schermata risultati
 
-![alt text](risultati.jpg)
-![image](https://github.com/SamueleLabollita/FantaLabo/assets/101709291/22059710-1f06-47b7-87ba-67fc3547fbdc)
+![image](https://github.com/SamueleLabollita/FantaLabo/assets/101709291/35f127c4-3878-4c75-bc10-6877032b97cc)
 
 schermata classifica
 
-![alt text](classifica.jpg)
+![image](https://github.com/SamueleLabollita/FantaLabo/assets/101709291/62d6b637-6782-4d46-8b20-6b8fe6f903bb)
