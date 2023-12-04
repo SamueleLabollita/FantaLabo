@@ -17,7 +17,7 @@ appasionati di calcio
 # SCHEMA E/R
 ![alt text](ER.png)
 # SCHEMA RELAZIONALE
-USER(<ins>Email<ins>, nome, cognome)
+USER(<ins>Email</ins>, nome, cognome)
 
 # MOKUP
 schermata principale
