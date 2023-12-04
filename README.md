@@ -23,6 +23,7 @@ GIOCATORE(<ins>id<\ins>, nome, cognome, <ins>SQUADRA _id<\ins>)
 GIOCA(<ins>GIOCATORE_id<\ins>, <ins>SQUADRA_id<\ins>)
 PARTITA(<ins>id<\ins>, squadra_casa, squadra_ospite, gol, assist, ammonizioni, espulsioni)
 
+
 # MOKUP
 schermata principale
 
