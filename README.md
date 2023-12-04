@@ -17,15 +17,15 @@ appasionati di calcio
 # SCHEMA E/R
 ![alt text](ER.png)
 # SCHEMA RELAZIONALE
-USER(<ins>Email<\ins>, nome, cognome)
+USER(<ins>Email</ins>, nome, cognome)
 
-SQUADRA(<ins>nome_squadra<\ins>, colori)
+SQUADRA(<ins>nome_squadra</ins>, colori)
 
-GIOCATORE(<ins>id<\ins>, nome, cognome, <ins>SQUADRA _id<\ins>)
+GIOCATORE(<ins>id</ins>, nome, cognome, <ins>SQUADRA _id</ins>)
 
-GIOCA(<ins>GIOCATORE_id<\ins>, <ins>SQUADRA_id<\ins>)
+GIOCA(<ins>GIOCATORE_id</ins>, <ins>SQUADRA_id</ins>)
 
-PARTITA(<ins>id<\ins>, squadra_casa, squadra_ospite, gol, assist, ammonizioni, espulsioni)
+PARTITA(<ins>id</ins>, squadra_casa, squadra_ospite, gol, assist, ammonizioni, espulsioni)
 
 
 # MOKUP
