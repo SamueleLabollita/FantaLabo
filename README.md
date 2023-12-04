@@ -44,6 +44,7 @@ Schermata partita
 schermata risultati
 
 ![alt text](risultati.jpg)
+![image](https://github.com/SamueleLabollita/FantaLabo/assets/101709291/22059710-1f06-47b7-87ba-67fc3547fbdc)
 
 schermata classifica
 
