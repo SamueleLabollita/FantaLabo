@@ -18,7 +18,7 @@ appasionati di calcio
 ![image](https://github.com/SamueleLabollita/FantaLabo/assets/101709291/17b66a8c-aafb-4257-ad04-3a6f6f39463b)
 
 # SCHEMA RELAZIONALE
-USER(<ins>Email</ins>, nome, cognome)
+USER(<ins>Email</ins>, nome, cognome, ruolo)
 
 SQUADRA(<ins>nome_squadra</ins>, colori)
 
