@@ -1,15 +1,12 @@
 <?php
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    if (isset($_POST['username'])) {
-        $username = $_POST['username'];
+session_start();
+$post = $_SESSION['POST'];
+     $randomNumber = rand(1, 10);
         
-        $randomNumber = rand(1, 10);
-        
-        if ($randomNumber % 2 === 0) {
-            header("Location: userpage.php?username=" . urlencode($username));
+        if ($randomNumber % 2 == 0) {
+            header("Location: /userpage.php");
         } else {
-            header("Location: login.html");
+            header("Location: /login.php");
         }
-    }
-}
 ?>
+

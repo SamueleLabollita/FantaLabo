@@ -1,3 +1,12 @@
+<?php
+    session_start();
+    $_SESSION['POST'] = $_POST;
+    if(isset($_POST['username'])){
+        header("Location: /auth.php");  
+    }
+    
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,7 +16,7 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
+            background-color: white;
             margin: 0;
             display: flex;
             justify-content: center;
@@ -32,8 +41,8 @@
         }
 
         .login-container button {
-            background-color: green;
-            color: white;
+            background-color: red;
+            color: black;
             padding: 10px 15px;
             border: none;
             border-radius: 4px;
@@ -44,15 +53,15 @@
 <body>
 
     <div class="login-container">
-        <h2>Login</h2>
-        <form action="auth.php" method="post">
+        <h2>Accedi</h2>
+        <form action="login.php" method="POST">
             <label for="username">Username:</label>
             <input type="text" id="username" name="username" required>
 
             <label for="password">Password:</label>
             <input type="password" id="password" name="password" required>
 
-            <button type="submit">Login</button>
+            <button type="submit">Entra</button>
         </form>
     </div>
 

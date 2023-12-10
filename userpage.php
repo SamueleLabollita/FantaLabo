@@ -1,9 +1,13 @@
+<?php
+    session_start();
+    $post = $_SESSION['POST'];
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>User Page</title>
+    <title>Home Page</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -16,36 +20,33 @@
         }
 
         .user-container {
-            background-color: #fff;
+            background-color: white;
             padding: 20px;
             border-radius: 8px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             text-align: center;
         }
 
-        .welcome-message {
+        .messaggio {
             font-size: 24px;
             color: #333;
         }
     </style>
 </head>
 <body>
-
     <div class="user-container">
-        <h2>User Page</h2>
-        <div class="welcome-message">
+        <h2>Home Page</h2>
+        <div class="messaggio">
             <?php
-            // Verifica se la variabile del nome utente è impostata
-            if (isset($_GET['username'])) {
-                $username = htmlspecialchars($_GET['username']);
-                echo "Welcome, $username!";
+            if (isset($post['username'])) {
+                $username = $post['username'];
+                echo "Benvenuto, $username!";
             } else {
-                echo "Invalid username.";
+                echo "username sbagliato.";
             }
             ?>
         </div>
     </div>
-
 </body>
 </html>
 
