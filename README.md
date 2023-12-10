@@ -52,20 +52,27 @@ schermata classifica
 
 # QUERY DATABASE
 Creo il database
+
 CREATE DATABASE FantaLabo
+
 ---------------------------
+
 CREATE TABLE UTENTE (
     Email VARCHAR(255) PRIMARY KEY,
     nome VARCHAR(255),
     cognome VARCHAR(255),
     ruolo VARCHAR(255)
 );
+
 ---------------------------
+
 CREATE TABLE SQUADRA (
     nome_squadra VARCHAR(255) PRIMARY KEY,
     colori VARCHAR(255)
 );
+
 ---------------------------
+
 CREATE TABLE GIOCATORE (
     id INT PRIMARY KEY,
     nome VARCHAR(255),
@@ -73,7 +80,9 @@ CREATE TABLE GIOCATORE (
     SQUADRA_id VARCHAR(255),
     FOREIGN KEY (SQUADRA_id) REFERENCES SQUADRA(nome_squadra)
 );
+
 ---------------------------
+
 CREATE TABLE GIOCA (
     GIOCATORE_id INT,
     SQUADRA_id VARCHAR(255),
@@ -81,7 +90,9 @@ CREATE TABLE GIOCA (
     FOREIGN KEY (GIOCATORE_id) REFERENCES GIOCATORE(id),
     FOREIGN KEY (SQUADRA_id) REFERENCES SQUADRA(nome_squadra)
 );
+
 ---------------------------
+
 CREATE TABLE PARTITA (
     id INT PRIMARY KEY,
     squadra_casa VARCHAR(255),
