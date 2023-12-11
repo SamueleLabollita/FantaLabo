@@ -2,7 +2,7 @@
     session_start();
     $_SESSION['POST'] = $_POST;
     if(isset($_POST['username'])){
-        header("Location: /auth.php");  
+        header("Location: /www/userpage.php");  
     }
     
 ?>
@@ -14,9 +14,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login Page</title>
     <style>
-        .body {
+        body {
             font-family: Arial, sans-serif;
-            background-color: white;
+            background-color: #f0f0f0;
             margin: 0;
             display: flex;
             justify-content: center;
@@ -52,9 +52,9 @@
 </head>
 <body>
 
-    <div class="login-container">
+ <div class="login-container">
         <h2>Accedi</h2>
-        <form action="login.php" method="POST">
+        <form action="loginController.php" method="POST">
             <label for="username">Username:</label>
             <input type="text" id="username" name="username" required>
 

@@ -47,7 +47,7 @@
             <label for="cognome">Cognome:</label> <input type="text" name="cognome" required> <br> 
             <label for="username">Username:</label> <input type="text" name="username" required> <br> 
             <label for="password">Password:</label> <input type="password" name="password" required> <br> 
-            <label for="mail">Mail:</label> <input type="email" name="mail" required> <br> 
+            <label for="mail">Mail:</label> <input type="email" name="email" required> <br> 
             <input type="submit" value="Registrati"> 
             <input type="submit" value="Ho già un account" onclick="window.location.href='login.php'"> 
         </form> 

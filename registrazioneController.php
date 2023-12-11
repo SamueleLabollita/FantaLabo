@@ -10,18 +10,21 @@
         die("Connessione fallita: " . $conn->connect_error);
     }
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
+        $email = $_POST["email"];
         $nome = $_POST["nome"];
         $cognome = $_POST["cognome"];
+        $ruolo = "utente";
         $username = $_POST["username"];
-        $password = $_POST["PASSWORD"];
-        $email = $_POST["Email"];
+        $password = $_POST["password"];
 
         $verifica = "SELECT * FROM UTENTE WHERE Username='$username' AND Email='$email'";
         $result = $conn->query($verifica);
 
-        $sql = "INSERT INTO UTENTE (Email, nome, cognome, username, PASSWORD, Email) VALUES ('$nome', '$cognome', '$username', '$password', '$email')";
+        $passcrip = md5($password);
+
+        $sql = "INSERT INTO UTENTE (email, nome, cognome, ruolo, username, password) VALUES ('$email', '$nome', '$cognome', '$ruolo' , '$username', '$passcrip')";
         $result = $conn->query($sql);
         $conn->close();
-        header("Location: /login.php");
+        header("Location: /www/login.php");
     }
 ?>
