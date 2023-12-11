@@ -15,8 +15,7 @@ Aiutare gli appasionati di calcio che vogliono creare un campionato di fantacalc
 # TARGET
 appasionati di calcio
 # SCHEMA E/R
-![image](https://github.com/SamueleLabollita/FantaLabo/assets/101709291/40d49414-5331-451c-ad52-90c49c0e2db2)
-
+![image](https://github.com/SamueleLabollita/FantaLabo/assets/101709291/7e75a526-db8c-4fcc-9f9a-ea0e570cabac)
 
 # SCHEMA RELAZIONALE
 USER(<ins>Email</ins>, nome, cognome, username, ruolo)
