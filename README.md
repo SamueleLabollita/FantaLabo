@@ -15,10 +15,11 @@ Aiutare gli appasionati di calcio che vogliono creare un campionato di fantacalc
 # TARGET
 appasionati di calcio
 # SCHEMA E/R
-![image](https://github.com/SamueleLabollita/FantaLabo/assets/101709291/17b66a8c-aafb-4257-ad04-3a6f6f39463b)
+![image](https://github.com/SamueleLabollita/FantaLabo/assets/101709291/40d49414-5331-451c-ad52-90c49c0e2db2)
+
 
 # SCHEMA RELAZIONALE
-USER(<ins>Email</ins>, nome, cognome, ruolo)
+USER(<ins>Email</ins>, nome, cognome, username, ruolo)
 
 SQUADRA(<ins>nome_squadra</ins>, colori)
 
@@ -61,6 +62,7 @@ CREATE TABLE UTENTE (
     Email VARCHAR(255) PRIMARY KEY,
     nome VARCHAR(255),
     cognome VARCHAR(255),
+    username VARCHAR(255),
     ruolo VARCHAR(255)
 );
 
