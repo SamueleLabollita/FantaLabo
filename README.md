@@ -67,10 +67,15 @@ schermata classifica
 PER IL DATABASE --> docker run --name myXampp -p 41061:22 -p 41062:80 -d -v /workspaces/FantaLabo:/www tomsik68/xampp:8
 
 PASSAGGI
+
 -CLICCARE L'ICONA DELLA BALENA
+
 -![image](https://github.com/SamueleLabollita/FantaLabo/assets/101709291/7320d59e-d019-4d62-b5ed-c3134e1d2810)
-TASTO DESTRO SULLA RIGA CON SCRITTO (tomsik68..)
+
+-TASTO DESTRO SULLA RIGA CON SCRITTO (tomsik68..)
+
 -OPEN IN BROWSER
+
 -AL POSTO DI ....dashboard/ --> sostituire con (www)
 
 
