@@ -2,25 +2,35 @@
 # DESCRIZIONE 
 Facilitare il calcolo dei voti dei calciatori con i vari bonus (gol, assist) e malus (ammonizioni, espulsioni) per sommarli e scoprire la squadra vincente. Sucessivamente calcolare la calssifica totale e conoscere il vincitore del campionato.  (ispirato a fantamaster).
 # Problema:  
-Aiutare gli appasionati di calcio che vogliono creare un campionato di fantacalcio tra amici per divertirsi, secondo i voti dei giocatori reali.
+offrire agli appassionati di calcio un'esperienza interattiva e coinvolgente, permettendo di creare e gestire squadre virtuali composte da giocatori reali. Questa applicazione mira a fornire un'esperienza simile a quella di un dirigente di una squadra di calcio, consentendo agli utenti di prendere decisioni riguardo alla formazione da schierare scegliendo i giocatori più adatti secondo le loro idee.
 # Elenco funzionlità:  
--registra un campionato (personalizzazione nome e budget per squadra)  
--registra una squadra (personalizzazione nome e colori sociali)  
--mercato (inserimento giocatori nelle squadre)  
--voto giocatore  
--punteggio totale di squadra  
--calendario partite  
--classifica (3pt vittoria; 1pt pareggio; 0pt sconfitta)  
--classifica statistiche giocatori (gol, assist, g/a, ammonizioni, espulsioni)
+FRONT
+
+-registra un campionato (personalizzazione nome) 
+
+-registra una squadra (personalizzazione nome e colori sociali) 
+
+-schierare una formazione
+
+-visualizzazione della classifica (3pt vittoria; 1pt pareggio; 0pt sconfitta)  
+BACK
+
+-inserire i giocatori nelle squadre
+
+-voto giocatore
+
 # TARGET
 appasionati di calcio
 # SCHEMA E/R
-![image](https://github.com/SamueleLabollita/FantaLabo/assets/101709291/7e75a526-db8c-4fcc-9f9a-ea0e570cabac)
+![image](https://github.com/SamueleLabollita/FantaLabo/assets/101709291/79138a98-ad7c-4736-a2a0-c12fc9d2dde3)
+
 
 # SCHEMA RELAZIONALE
 USER(<ins>Email</ins>, nome, cognome, username, ruolo)
 
-SQUADRA(<ins>nome_squadra</ins>, colori)
+CAMPIONATO(<ins>id</ins>, nome_campionato)
+
+SQUADRA(<ins>nome_squadra</ins>, colori, <ins>CAMPIONATO_id</ins>)
 
 GIOCATORE(<ins>id</ins>, nome, cognome, <ins>SQUADRA _id</ins>)
 
@@ -50,58 +60,4 @@ schermata classifica
 
 ![image](https://github.com/SamueleLabollita/FantaLabo/assets/101709291/62d6b637-6782-4d46-8b20-6b8fe6f903bb)
 
-# QUERY DATABASE
-Creo il database
 
-CREATE DATABASE FantaLabo
-
----------------------------
-
-CREATE TABLE UTENTE (
-    Email VARCHAR(255) PRIMARY KEY,
-    nome VARCHAR(255),
-    cognome VARCHAR(255),
-    username VARCHAR(255),
-    ruolo VARCHAR(255)
-);
-
----------------------------
-
-CREATE TABLE SQUADRA (
-    nome_squadra VARCHAR(255) PRIMARY KEY,
-    colori VARCHAR(255)
-);
-
----------------------------
-
-CREATE TABLE GIOCATORE (
-    id INT PRIMARY KEY,
-    nome VARCHAR(255),
-    cognome VARCHAR(255),
-    SQUADRA_id VARCHAR(255),
-    FOREIGN KEY (SQUADRA_id) REFERENCES SQUADRA(nome_squadra)
-);
-
----------------------------
-
-CREATE TABLE GIOCA (
-    GIOCATORE_id INT,
-    SQUADRA_id VARCHAR(255),
-    PRIMARY KEY (GIOCATORE_id, SQUADRA_id),
-    FOREIGN KEY (GIOCATORE_id) REFERENCES GIOCATORE(id),
-    FOREIGN KEY (SQUADRA_id) REFERENCES SQUADRA(nome_squadra)
-);
-
----------------------------
-
-CREATE TABLE PARTITA (
-    id INT PRIMARY KEY,
-    squadra_casa VARCHAR(255),
-    squadra_ospite VARCHAR(255),
-    gol INT,
-    assist INT,
-    ammonizioni INT,
-    espulsioni INT,
-    FOREIGN KEY (squadra_casa) REFERENCES SQUADRA(nome_squadra),
-    FOREIGN KEY (squadra_ospite) REFERENCES SQUADRA(nome_squadra)
-);
