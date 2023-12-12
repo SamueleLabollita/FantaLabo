@@ -16,12 +16,15 @@ BACK
 # TARGET
 appasionati di calcio
 # SCHEMA E/R
-![image](https://github.com/SamueleLabollita/FantaLabo/assets/101709291/7e75a526-db8c-4fcc-9f9a-ea0e570cabac)
+![image](https://github.com/SamueleLabollita/FantaLabo/assets/101709291/79138a98-ad7c-4736-a2a0-c12fc9d2dde3)
+
 
 # SCHEMA RELAZIONALE
 USER(<ins>Email</ins>, nome, cognome, username, ruolo)
 
-SQUADRA(<ins>nome_squadra</ins>, colori)
+CAMPIONATO(<ins>id</ins>, nome_campionato)
+
+SQUADRA(<ins>nome_squadra</ins>, colori, <ins>CAMPIONATO_id</ins>)
 
 GIOCATORE(<ins>id</ins>, nome, cognome, <ins>SQUADRA _id</ins>)
 
