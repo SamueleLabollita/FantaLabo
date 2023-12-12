@@ -7,9 +7,16 @@ CREATE TABLE UTENTE (
     ruolo VARCHAR(255) 
 );
 
+CREATE TABLE CAMPIONATO ( 
+    id int AUTO_INCREMENT PRIMARY KEY,
+    nome_campionato VARCHAR(255) 
+);
+
 CREATE TABLE SQUADRA ( 
     nome_squadra VARCHAR(255) PRIMARY KEY, 
-    colori VARCHAR(255) 
+    colori VARCHAR(255),
+    id int,
+    FOREIGN KEY (id) REFERENCES CAMPIONATO(id)
 );
 
 CREATE TABLE GIOCATORE ( 
