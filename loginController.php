@@ -19,7 +19,7 @@
         $result = $conn->query($sql);
         
         if($result->num_rows > 0){
-            $_SESSION['username'] = $username;
+            $_SESSION["username"] = $username;
             header("Location: /www/userpage.php");
         }else{
             header("Location: /www/login.php");
