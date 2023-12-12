@@ -69,6 +69,8 @@ $username = $_SESSION["username"];
         <form action="creaCampionato.php" method="post"> 
             <button type="submit">Crea campionato</button>
         </form>
-        
+        <form action="creaSquadra.php" method="post"> 
+            <button type="submit">Crea squadra</button>
+        </form>
     </body> 
 </html>

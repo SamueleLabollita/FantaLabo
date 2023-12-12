@@ -38,6 +38,7 @@
             padding: 10px;
             margin: 8px 0;
             box-sizing: border-box;
+            border: 1px solid #ccc;
         }
 
         .login-container button {
@@ -61,7 +62,8 @@
             <label for="password">Password:</label>
             <input type="password" id="password" name="password" required>
 
-            <button type="submit">Entra</button>
+            <button type="submit">Entra</button> 
+            <input type="submit" value="REGISTRAZIONE" onclick="window.location.href='registrazione.php'">
         </form>
     </div>
 
