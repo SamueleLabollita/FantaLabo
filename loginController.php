@@ -19,6 +19,7 @@
         $result = $conn->query($sql);
         
         if($result->num_rows > 0){
+            session_start();
             $_SESSION["username"] = $username;
             header("Location: /www/userpage.php");
         }else{
@@ -26,4 +27,5 @@
             echo "Username o password errati";
         }
     }
+    $conn->close();
 ?>

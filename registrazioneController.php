@@ -24,7 +24,7 @@
 
         $sql = "INSERT INTO UTENTE (email, nome, cognome, ruolo, username, password) VALUES ('$email', '$nome', '$cognome', '$ruolo' , '$username', '$passcrip')";
         $result = $conn->query($sql);
-        $conn->close();
         header("Location: /www/login.php");
+        $conn->close();
     }
 ?>
