@@ -5,12 +5,16 @@ Facilitare il calcolo dei voti dei calciatori con i vari bonus (gol, assist) e m
 offrire agli appassionati di calcio un'esperienza interattiva e coinvolgente, permettendo di creare e gestire squadre virtuali composte da giocatori reali. Questa applicazione mira a fornire un'esperienza simile a quella di un dirigente di una squadra di calcio, consentendo agli utenti di prendere decisioni riguardo alla formazione da schierare scegliendo i giocatori più adatti secondo le loro idee.
 # Elenco funzionlità:  
 FRONT
--registra un campionato (personalizzazione nome)  
+-registra un campionato (personalizzazione nome) 
+
 -registra una squadra (personalizzazione nome e colori sociali) 
+
 -schierare una formazione
+
 -visualizzazione della classifica (3pt vittoria; 1pt pareggio; 0pt sconfitta)  
 BACK
 -inserire i giocatori nelle squadre
+
 -voto giocatore
 
 # TARGET
