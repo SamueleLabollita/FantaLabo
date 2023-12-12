@@ -13,6 +13,7 @@ FRONT
 
 -visualizzazione della classifica (3pt vittoria; 1pt pareggio; 0pt sconfitta)  
 BACK
+
 -inserire i giocatori nelle squadre
 
 -voto giocatore
