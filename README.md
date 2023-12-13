@@ -66,6 +66,8 @@ schermata classifica
 
 PER IL DATABASE --> PASSAGGI
 
+docker run --name db -p 41061:22 -p 41062:80 -d -v /workspaces/FantaLabo:/www tomsik68/xampp:8
+
 -CLICCARE L'ICONA DELLA BALENA
 
 -![image](https://github.com/SamueleLabollita/FantaLabo/assets/101709291/7320d59e-d019-4d62-b5ed-c3134e1d2810)
