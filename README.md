@@ -60,8 +60,10 @@ schermata classifica
 
 ![image](https://github.com/SamueleLabollita/FantaLabo/assets/101709291/62d6b637-6782-4d46-8b20-6b8fe6f903bb)
 
-#PREREQUISITI
+# PREREQUISITI
+
 -DOCKER 
+
 -CODESPACES
 
 PER IL DATABASE --> PASSAGGI
