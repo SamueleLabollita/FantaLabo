@@ -15,13 +15,18 @@
         $password = $_POST["password"];
         $passcrip = md5($password);
 
-        $sql = "SELECT * FROM UTENTE WHERE Username='$username' AND Password='$passcrip'";
+        $sql = "SELECT ruolo FROM UTENTE WHERE Username='$username' AND Password='$passcrip'";
         $result = $conn->query($sql);
         
-        if($result->num_rows > 0){
+        if($result->num_rows > 0 ){
             session_start();
             $_SESSION["username"] = $username;
-            header("Location: /www/userpage.php");
+            $row = $result->fetch_assoc();
+            if($row["ruolo"] == "admin"){
+                header("Location: /www/adminpage.php");
+            }else{
+                header("Location: /www/userpage.php");
+            }
         }else{
             header("Location: /www/login.php");
             echo "Username o password errati";

@@ -16,7 +16,7 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #f0f0f0;
+            background-color: #0099ff;
             margin: 0;
             display: flex;
             justify-content: center;
@@ -42,18 +42,18 @@
         }
 
         .login-container button {
-            background-color: red;
+            background-color: #0099ff;
             color: black;
             padding: 10px 15px;
             border: none;
             border-radius: 4px;
             cursor: pointer;
         }
+
     </style>
 </head>
 <body>
-
- <div class="login-container">
+    <div class="login-container">
         <h2>Accedi</h2>
         <form action="loginController.php" method="POST">
             <label for="username">Username:</label>
