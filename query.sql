@@ -47,3 +47,8 @@ CREATE TABLE PARTITA (
     FOREIGN KEY (squadra_casa) REFERENCES SQUADRA(nome_squadra), 
     FOREIGN KEY (squadra_ospite) REFERENCES SQUADRA(nome_squadra) 
 );
+--inserimento del admin
+INSERT INTO UTENTE (Email, nome, cognome, ruolo, username, password) VALUES ('admin@gmail.com', 'admin', 'admin', 'admin', 'ad', '28a387778982f9aa3634dc93435c4052');
+--credenziali admin
+--USERNAME: ad
+--PASSWORD: ad01
