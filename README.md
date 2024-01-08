@@ -26,7 +26,7 @@ appasionati di calcio
 
 
 # SCHEMA RELAZIONALE
-USER(<ins>Email</ins>, nome, cognome, username, ruolo)
+USER(<ins>Email</ins>, nome, cognome, username, ruolo, squadra_posseduta)
 
 CAMPIONATO(<ins>id</ins>, nome_campionato)
 
