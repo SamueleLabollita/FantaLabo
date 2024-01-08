@@ -3,8 +3,9 @@ CREATE TABLE UTENTE (
     Email VARCHAR(255) PRIMARY KEY, 
     nome VARCHAR(255), 
     cognome VARCHAR(255), 
-    username VARCHAR(255), 
-    ruolo VARCHAR(255) 
+    ruolo VARCHAR(255),
+    username VARCHAR(255),
+    squadra VARCHAR(255)  
 );
 
 CREATE TABLE CAMPIONATO ( 

@@ -42,7 +42,7 @@ $username = $_SESSION["username"];
             }
 
             button {
-                background-color: blue;
+                background-color: grey;
                 color: #fff;
                 padding: 10px 20px;
                 border: none;
@@ -52,7 +52,7 @@ $username = $_SESSION["username"];
             }
 
             button:hover {
-                background-color: lightblue;
+                background-color: lightgrey;
             }
         </style>
     </head> 
@@ -65,18 +65,10 @@ $username = $_SESSION["username"];
                 <button type="submit">Logout</button>
             </form>
         </header>
-        <h1>ADMIN PAGE</h1>
-        <form action="creaCampionato.php" method="post"> 
-            <button type="submit">Crea campionato</button>
-        </form>
-        <form action="creaSquadra.php" method="post"> 
-            <button type="submit">Crea squadra</button>
-        </form>
-        <form action="inserisciGiocatori.php" method="post">
-            <button type="submit">Inserisci giocatori nel database</button>
-        </form>
-        <form action="visualizzaGiocatori.php" method="post">
-            <button type="submit">visualizza giocatori presenti</button>
-        </form>
-    </body> 
+        <h1>Visualizzazione giocatori</h1>
+    <!-- elencare giocatori con un bottone -->
+    <form action="visualizzaGiocatoriController.php" method="post">
+        <button type="submit">Visualizza giocatori</button>
+    </form>
+    </body>
 </html>
