@@ -20,7 +20,7 @@
     <head> 
         <meta charset="UTF-8"> 
         <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-        <title>Registrazione</title> 
+        <title>Registrazione Squadra</title> 
         <style> 
             body { 
                 font-family: Arial, sans-serif; 
@@ -32,6 +32,25 @@
                 padding: 20px;
                 border: 1px solid #cccccc;
                 background-color: #ffffff;
+            }
+
+            header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            text-align: right;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            }
+
+            h1 {
+                text-align: center;
+            }
+
+            form {
+                text-align: center;
+                margin-top: 20px;
             }
 
             label {
@@ -57,6 +76,16 @@
         </style>
     </head> 
     <body> 
+        <header>
+            <div>
+                <span>Benvenuto, <?php echo $username; ?>!</span>
+            </div>
+            <form action="adminpage.php" method="post"> 
+                <button type="submit">Home</button>
+            </form>
+            <form action="logout.php" method="post"> 
+                <button type="submit">Logout</button>
+        </header>
         <form method="post" action="creaSquadraController.php"> 
             <label for="nome">Nome Squadra:</label> 
             <input type="text" name="nomeSquadra" required> <br> 
