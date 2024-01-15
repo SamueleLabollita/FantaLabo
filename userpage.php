@@ -67,10 +67,10 @@ $username = $_SESSION["username"];
             </form>
         </header>
         <h1>Home</h1>
-        <form action="creaCampionato.php" method="post"> 
+        <form action="creaCampionatoUser.php" method="post"> 
             <button type="submit">Crea campionato</button>
         </form>
-        <form action="creaSquadra.php" method="post"> 
+        <form action="creaSquadraUser.php" method="post"> 
             <button type="submit">Crea squadra</button>
         </form>
     </body> 

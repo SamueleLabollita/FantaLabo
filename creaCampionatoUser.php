@@ -17,15 +17,14 @@ $username = $_SESSION["username"];
     <style> 
         body {
             font-family: Arial, sans-serif;
-            background-color: #f0f0f0;
+            background-color: lightblue;
         }
 
         form {
             width: 300px;
             margin: 0 auto;
             padding: 20px;
-            border: 1px solid #cccccc;
-            background-color: #ffffff;
+            background-color: #333;
         }
 
         header {
@@ -41,6 +40,7 @@ $username = $_SESSION["username"];
         label {
             display: block;
             margin-bottom: 5px;
+            color: #fff;
         }
 
         input[type="text"],
@@ -55,9 +55,6 @@ $username = $_SESSION["username"];
             box-sizing: border-box;
         }
 
-        input[type="submit"]:hover {
-            background-color: white;
-        }
 
         button {
             background-color: grey;
@@ -76,16 +73,14 @@ $username = $_SESSION["username"];
     </head> 
     <body> 
         <header>
-            <div>
-                <span>Benvenuto, <?php echo $username; ?>!</span>
-            </div>
-            <form action="adminpage.php" method="post"> 
+            <form action="userpage.php" method="post"> 
                 <button type="submit">Home</button>
             </form>
             <form action="logout.php" method="post"> 
                 <button type="submit">Logout</button>
+            </form>
         </header>
-        <form method="post" action="creaCampionatoController.php"> 
+        <form method="post" action="creaCampionatoUserController.php"> 
             <label for="nome">Nome Campionato:</label> <input type="text" name="nomeCampionato" required> <br> 
             <input type="submit" value="CREA"> 
         </form> 

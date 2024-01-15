@@ -100,9 +100,6 @@ $result = mysqli_query($conn, $query);
     </head> 
     <body> 
         <header>
-            <div>
-                <span>Benvenuto, <?php echo $username; ?>!</span>
-            </div>
             <form action="adminpage.php" method="post"> 
                 <button type="submit">Home</button>
             </form>

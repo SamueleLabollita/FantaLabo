@@ -24,14 +24,13 @@
         <style> 
             body { 
                 font-family: Arial, sans-serif; 
-                background-color: #f0f0f0; 
+                background-color: lightblue;
             }
             form {
                 width: 300px;
                 margin: 0 auto;
                 padding: 20px;
-                border: 1px solid #cccccc;
-                background-color: #ffffff;
+                background-color: #333;
             }
 
             header {
@@ -51,11 +50,13 @@
             form {
                 text-align: center;
                 margin-top: 20px;
+                color: #fff;
             }
 
             label {
                 display: block;
                 margin-bottom: 5px;
+                color: #fff;
             }
 
             input[type="text"],
@@ -73,23 +74,35 @@
             input[type="submit"]:hover {
                 background-color: white;
             }
+
+            button {
+                background-color: grey;
+                color: #fff;
+                padding: 10px 20px;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+                transition: background-color 0.3s;
+            }
+
+            button:hover {
+                background-color: lightgrey;
+            }
         </style>
     </head> 
     <body> 
         <header>
-            <div>
-                <span>Benvenuto, <?php echo $username; ?>!</span>
-            </div>
-            <form action="adminpage.php" method="post"> 
+            <form action="userpage.php" method="post"> 
                 <button type="submit">Home</button>
             </form>
             <form action="logout.php" method="post"> 
                 <button type="submit">Logout</button>
+            </form>
         </header>
-        <form method="post" action="creaSquadraController.php"> 
+        <form method="post" action="creaSquadraUserController.php"> 
             <label for="nome">Nome Squadra:</label> 
             <input type="text" name="nomeSquadra" required> <br> 
-            <label for="colori">Colori</label> 
+            <label for="colori">Colori:</label> 
             <input type="text" name="colori" required> <br> 
             <label for="campionato">Seleziona il campionato:</label>
             <select id="campionato" name="campionato">
