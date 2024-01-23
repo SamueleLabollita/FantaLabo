@@ -22,7 +22,6 @@
         $nomeSquadra = $_POST["nomeSquadra"];
         $colori = $_POST["colori"];
         $campionato = $_POST["campionato"];
-
         
         $sql1 = "INSERT INTO SQUADRA (nome_squadra, colori, id) VALUES ('$nomeSquadra', '$colori', '$campionato')";
         $result1 = $conn->query($sql1);

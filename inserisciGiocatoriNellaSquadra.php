@@ -16,6 +16,7 @@
 
     $querySquadra = "SELECT `id`, `nome_squadra` FROM `SQUADRA`;";
     $resultSquadra = $conn->query($querySquadra);
+    session_abort();
 ?>
 <!DOCTYPE html> 
 <html lang="en"> 
@@ -51,6 +52,7 @@
         label {
             display: block;
             margin-bottom: 5px;
+            color: #fff;
         }
 
         input[type="submit"]:hover {
@@ -78,26 +80,41 @@
             </form>
             <form action="logout.php" method="post"> 
                 <button type="submit">Logout</button>
+            </form>
         </header>
-        <h1>(NON VA PER ORA)</h1>
         <form method="post" action="inserimentoNellaSquadraController.php"> 
             <label for="giocatore">Seleziona il giocatore</label>
             <select id="giocatore" name="giocatore">
                 <?php
                     while($row = $resultGiocatore->fetch_assoc()) {
-                        echo "<option value=\"".$row["id"]."\">".$row["nome"]." ".$row["cognome"]."</option>";
+                        $idGiocatore = $row["id"];
+                        $nomeCognome = $row["nome"] . " " . $row["cognome"];
+                        echo "<option value=\"$idGiocatore\">$nomeCognome</option>";
                     }
                 ?>
             </select>
-            <label for="squaadra">Seleziona la squadra</label>
+            <label for="squadra">Seleziona la squadra</label>
             <select id="squadra" name="squadra">
                 <?php
                     while($row = $resultSquadra->fetch_assoc()) {
-                        echo "<option value=\"".$row["id"]."\">".$row["nome_squadra"]."</option>";
+                        echo "<option value=\"".$row["nome_squadra"]."\">".$row["nome_squadra"]."</option>";
                     }
                 ?>
             </select>
             <input type="submit" value="Inserisci"> 
-        </form> 
+        </form>
+        <?php
+        // Display success message if it exists
+        if (isset($_GET["successMessage"])) {
+            $successMessage = urldecode($_GET["successMessage"]);
+            echo "<p style='color: green;'>$successMessage</p>";
+        }
+
+        // Display error message if it exists
+        if (isset($_GET["errorMessage"])) {
+            $errorMessage = urldecode($_GET["errorMessage"]);
+            echo "<p style='color: red;'>$errorMessage</p>";
+        }
+        ?>
     </body> 
 </html>

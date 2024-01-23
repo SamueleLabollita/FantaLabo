@@ -30,7 +30,6 @@ if(isset($_POST['submit']) && $_POST['ruolo'] != "") {
 }
 $result = mysqli_query($conn, $query);
 
-
 ?> 
 
 <!DOCTYPE html> 
@@ -39,6 +38,7 @@ $result = mysqli_query($conn, $query);
         <meta charset="UTF-8"> 
         <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
         <title>Pagina Admin</title> 
+        
         <style>
         body {
             margin: 0;
@@ -109,7 +109,7 @@ $result = mysqli_query($conn, $query);
             </form>
         </header>
         <h1>Visualizzazione giocatori</h1>
-        <form id="filterForm" action="" method="post">
+        <form action="" method="post">
             <label for="ruolo">Seleziona il ruolo:</label>
             <select name="ruolo" id="ruolo">
                 <option value="Attaccante">Attaccante</option>
@@ -126,37 +126,15 @@ $result = mysqli_query($conn, $query);
                 <th>Cognome</th>
                 <th>Ruolo</th>
             </tr>
-            <tbody>
-            <?php
-                while($row = mysqli_fetch_assoc($result)) {
-                    echo "<tr>";
-                    echo "<td>".$row['nome']."</td>";
-                    echo "<td>".$row['cognome']."</td>";
-                    echo "<td>".$row['ruolo']."</td>";
-                    echo "</tr>";
-                }
-                if(!empty($_SERVER['HTTP_X_REQUESTED_WITH']) && strtolower($_SERVER['HTTP_X_REQUESTED_WITH']) == 'xmlhttprequest') {
-                    exit(); 
-                }
+            <?php 
+            while($row = mysqli_fetch_assoc($result)) {
+                echo "<tr>";
+                echo "<td>".$row['nome']."</td>";
+                echo "<td>".$row['cognome']."</td>";
+                echo "<td>".$row['ruolo']."</td>";
+                echo "</tr>";
+            }
             ?>
-             
-            </tbody>
         </table>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-        <script>
-            $(document).ready(function(){
-                $("#filterForm").submit(function(e){
-                    e.preventDefault();
-                    $.ajax({
-                        type: "POST",
-                        url: "visualizzaGiocatori.php",
-                        data: $(this).serialize(),
-                        success: function(response){
-                            $('table tbody').html(response);
-                        }
-                    });
-                });
-            })
-        </script>
     </body>
 </html>
