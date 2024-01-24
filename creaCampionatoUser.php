@@ -81,7 +81,7 @@ $username = $_SESSION["username"];
             </form>
         </header>
         <form method="post" action="creaCampionatoUserController.php"> 
-            <label for="nome">Nome Campionato:</label> <input type="text" name="nomeCampionato" required> <br> 
+            <label for="nome">Nome Campionato:</label> <input type="text" name="nome_campionato" required> <br> 
             <input type="submit" value="CREA"> 
         </form> 
     </body> 
