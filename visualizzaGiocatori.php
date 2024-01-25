@@ -125,6 +125,7 @@ $result = mysqli_query($conn, $query);
                 <th>Nome</th>
                 <th>Cognome</th>
                 <th>Ruolo</th>
+                <th>Elimina</th>
             </tr>
             <?php 
             while($row = mysqli_fetch_assoc($result)) {
@@ -132,6 +133,7 @@ $result = mysqli_query($conn, $query);
                 echo "<td>".$row['nome']."</td>";
                 echo "<td>".$row['cognome']."</td>";
                 echo "<td>".$row['ruolo']."</td>";
+                echo "<td><a href='eliminaGiocatore.php?nome=".$row['nome']."&cognome=".$row['cognome']."&ruolo=".$row['ruolo']."'>Elimina</a></td>";
                 echo "</tr>";
             }
             ?>
