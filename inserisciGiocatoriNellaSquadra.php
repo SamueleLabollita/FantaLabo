@@ -11,7 +11,7 @@
         die("Connessione fallita: " . $conn->connect_error);
     }
 
-    $queryGiocatore = "SELECT `id`, `nome`, `cognome` FROM `GIOCATORE`;";
+    $queryGiocatore = "SELECT `id`, `nome`, `cognome`, `SQUADRA_nome` FROM `GIOCATORE` WHERE SQUADRA_nome IS NULL;";
     $resultGiocatore = $conn->query($queryGiocatore);
 
     $querySquadra = "SELECT `id`, `nome_squadra` FROM `SQUADRA`;";
@@ -104,13 +104,10 @@
             <input type="submit" value="Inserisci"> 
         </form>
         <?php
-        // Display success message if it exists
         if (isset($_GET["successMessage"])) {
             $successMessage = urldecode($_GET["successMessage"]);
             echo "<p style='color: green;'>$successMessage</p>";
         }
-
-        // Display error message if it exists
         if (isset($_GET["errorMessage"])) {
             $errorMessage = urldecode($_GET["errorMessage"]);
             echo "<p style='color: red;'>$errorMessage</p>";

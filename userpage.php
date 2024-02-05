@@ -73,5 +73,8 @@ $username = $_SESSION["username"];
         <form action="creaSquadraUser.php" method="post"> 
             <button type="submit">Crea squadra</button>
         </form>
+        <form action="inserisciFormazione.php" method="post"> 
+            <button type="submit">Inserisci Formazione</button>
+        </form>
     </body> 
 </html>
