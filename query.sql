@@ -53,3 +53,9 @@ INSERT INTO UTENTE (Email, nome, cognome, ruolo, username, password) VALUES ('ad
 --credenziali admin
 --USERNAME: ad
 --PASSWORD: ad01
+
+--inserimento campionato
+INSERT INTO `CAMPIONATO` (`id`, `nome_campionato`) VALUES (NULL, 'Champions League');
+
+--inserimento squadre
+INSERT INTO `SQUADRA` (`nome_squadra`, `colori`, `id`) VALUES ('I maghi', 'Bianco', NULL);

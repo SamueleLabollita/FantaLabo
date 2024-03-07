@@ -1,4 +1,14 @@
 <?php 
+$servername = "localhost";
+$username = "root";
+$password = "";
+$dbname = "FantaLabo";
+
+$conn = new mysqli($servername, $username, $password, $dbname);
+
+if ($conn->connect_error) {
+    die("Connessione fallita: " . $conn->connect_error);
+}
 session_start(); 
 
 if (!isset($_SESSION["username"])) { 
@@ -7,6 +17,17 @@ if (!isset($_SESSION["username"])) {
 } 
 
 $username = $_SESSION["username"]; 
+
+$sql = "SELECT squadra_posseduta FROM UTENTE WHERE username = '$username'";
+$result = $conn->query($sql);
+
+if ($result->num_rows > 0) {
+    while($row = $result->fetch_assoc()) {
+        $squadra = $row["squadra_posseduta"];
+    }
+} else {
+    echo "0 results";
+}
 ?> 
 
 <!DOCTYPE html> 
@@ -65,6 +86,9 @@ $username = $_SESSION["username"];
             <form action="logout.php" method="post"> 
                 <button type="submit">Logout</button>
             </form>
+            <div>
+                <span>La tua squadra: <?php echo $squadra; ?></span>
+            </div>
         </header>
         <h1>Home</h1>
         <form action="creaCampionatoUser.php" method="post"> 
