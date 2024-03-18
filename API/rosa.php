@@ -16,9 +16,9 @@
 
     if(isset($_GET['id'])){
         $id = $_GET['id'];
-        $sql = "SELECT * FROM UTENTE WHERE id = $id";
+        $sql = "SELECT squadra_posseduta FROM UTENTE WHERE id = $id";
     } else {
-        $sql = "SELECT * FROM UTENTE";
+        $sql = "SELECT squadra_posseduta FROM UTENTE";
     }
 
     $result = $conn->query($sql);
@@ -26,26 +26,25 @@
     // Creazione di un array contenente i dati estratti dal database
     $utenti = array();
     while ($rowUtente = $result->fetch_assoc()) {
-        $username = $rowUtente["username"];
-        $nome = $rowUtente["nome"];
-        $cognome = $rowUtente["cognome"];
-        $ruolo = $rowUtente["ruolo"];
         $squadra_posseduta = $rowUtente["squadra_posseduta"];
-        $email = $rowUtente["email"];
-    
-    
-        // Aggiungi i dati dell'utente all'array degli utenti
-        $utente = array(
-            "username" => $username,
+    }
+    //qury pe esrarre la rosa
+    $sqlRosa = "SELECT * FROM GIOCATORE WHERE SQUADRA_nome = '$squadra_posseduta'";
+    $resultRosa = $conn->query($sqlRosa);
+ 
+    while ($rowRosa = $resultRosa->fetch_assoc()){
+        $nome = $rowRosa["nome"];
+        $cognome = $rowRosa["cognome"];
+        $ruolo = $rowRosa["ruolo"];
+        $SQUADRA_nome = $rowRosa["SQUADRA_nome"];
+        
+        $rosa = array(
             "nome" => $nome,
             "cognome" => $cognome,
             "ruolo" => $ruolo,
-            "squadra_posseduta" => $squadra_posseduta,
-            "email" => $email
+            "SQUADRA_nome" => $SQUADRA_nome
         );
-    
-        // Aggiungi l'utente all'array degli utenti
-        $utenti[] = $utente;
+        $utenti[] = $rosa;
     }
    
 
