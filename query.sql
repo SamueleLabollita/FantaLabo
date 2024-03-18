@@ -1,6 +1,7 @@
 
 CREATE TABLE UTENTE ( 
-    Email VARCHAR(255) PRIMARY KEY, 
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    Email VARCHAR(255) UNIQUE, 
     nome VARCHAR(255), 
     cognome VARCHAR(255), 
     ruolo VARCHAR(255),
@@ -49,7 +50,7 @@ CREATE TABLE PARTITA (
     FOREIGN KEY (squadra_ospite) REFERENCES SQUADRA(nome_squadra) 
 );
 --inserimento del admin
-INSERT INTO UTENTE (Email, nome, cognome, ruolo, username, password) VALUES ('admin@gmail.com', 'admin', 'admin', 'admin', 'ad', '28a387778982f9aa3634dc93435c4052');
+INSERT INTO UTENTE (id, Email, nome, cognome, ruolo, username, password) VALUES (NULL, 'admin@gmail.com', 'admin', 'admin', 'admin', 'ad', '28a387778982f9aa3634dc93435c4052');
 --credenziali admin
 --USERNAME: ad
 --PASSWORD: ad01
