@@ -22,7 +22,8 @@ BACK
 # TARGET
 appasionati di calcio
 # SCHEMA E/R
-![image](https://github.com/SamueleLabollita/FantaLabo/assets/101709291/79138a98-ad7c-4736-a2a0-c12fc9d2dde3)
+![image](![er](https://github.com/SamueleLabollita/FantaLabo/assets/101709291/cccc284e-6eb2-4821-b702-12718ac17a99)
+)
 
 
 # SCHEMA RELAZIONALE
