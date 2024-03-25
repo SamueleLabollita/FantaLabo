@@ -1,9 +1,8 @@
-
 RewriteEngine on
 
 # If the application is not in the root directory
 # Replace /www with / if your application is at the root of your domain
-RewriteBase /www/API/
+RewriteBase /www
 
 # If the request is for the root directory
 RewriteRule ^$ public/ [L]
@@ -16,15 +15,3 @@ RewriteRule ^ - [L]
 
 # If the request is for a file or directory that does not exist
 RewriteRule ^(.*)$ public/index.php [L]
-
-#RewriteBase /www/API/
-
-# Reindirizzamento per DatiUtente.php con ID
-#RewriteRule ^utenti/(\d+)/?$ utenti.php?id=$1 [L]
-
-# Reindirizzamento per DatiUtente.php
-#RewriteRule ^utenti/?$ utenti.php [L]
-
-#RewriteRule ^utenti/(\d+)/rosa/?$ rosa.php?id=$1 [L]
-
-
