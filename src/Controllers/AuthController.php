@@ -10,7 +10,8 @@ use Psr\Container\ContainerInterface;
 
 use Firebase\JWT\JWT;
 use Firebase\JWT\Key;
-
+use PDO;
+use PDOException;
 
 class AuthController
 {
@@ -28,24 +29,60 @@ class AuthController
         $username = $data['username'];
         $password = $data['password'];
 
-        // Your authentication logic goes here...
-        // For example:
-        if ($username === 'admin' && $password === 'password') {
+        // Retrieve user credentials from the database
+        $dbCredentials = $this->getUserCredentialsFromDatabase($username, $password);
+
+        // Check if user exists and password matches
+        if ($dbCredentials !== null) {
             // Generate and return the JWT token
-            $token = $this->generateToken(
-                [
-                    'username' => $username, 
-                    'profilo' => 
-                        [
-                            'nome' => 'Mario',
-                            'cognome' => 'Rossi'
-                        ],
-                ]);
+            $token = $this->generateToken([
+                'username' => $username,
+                'profilo' => [
+                    'nome' => $dbCredentials['nome'],
+                    'cognome' => $dbCredentials['cognome']
+                ]
+            ]);
             return $response->withJson(['token' => $token]);
         } else {
             return $response->withStatus(401)->withJson(['error' => 'Invalid username or password']);
         }
     }
+
+
+    protected function getUserCredentialsFromDatabase($username, $password)
+    {
+        // Connessione al database
+        $dsn = 'mysql:host=localhost;dbname=FantaLabo';
+        $dbUsername = 'root'; // Sostituisci con il tuo nome utente del database
+        $dbPassword = ''; // Sostituisci con la tua password del database
+
+        try {
+            $pdo = new PDO($dsn, $dbUsername, $dbPassword);
+            $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
+            // Prepara e esegue la query per recuperare le credenziali dell'utente
+            $statement = $pdo->prepare('SELECT * FROM UTENTE WHERE username = :username');
+            $statement->execute([':username' => $username]);
+
+            // Ottiene le credenziali dell'utente
+            $user = $statement->fetch(PDO::FETCH_ASSOC);
+
+            // Verifica se l'utente esiste e la password corrisponde
+            if ($user && md5($password) === $user['password']) {
+                return $user;
+            } else {
+                return null; // Utente non trovato o password non corrispondente
+            }
+
+            // Chiude la connessione al database
+            $pdo = null;
+        } catch (PDOException $e) {
+            // Gestisci eventuali errori di connessione al database
+            echo 'Errore di connessione al database: ' . $e->getMessage();
+        }
+    }
+
+
 
     protected function generateToken($data)
     {
