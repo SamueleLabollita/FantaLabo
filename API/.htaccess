@@ -3,7 +3,7 @@ RewriteEngine on
 
 # If the application is not in the root directory
 # Replace /www with / if your application is at the root of your domain
-RewriteBase /www
+RewriteBase /www/API/
 
 # If the request is for the root directory
 RewriteRule ^$ public/ [L]

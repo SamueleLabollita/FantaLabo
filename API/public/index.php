@@ -4,7 +4,7 @@ use DI\ContainerBuilder;
 use DI\Bridge\Slim\Bridge;
 
 // Require composer autoloader
-require __DIR__ . '/../vendor/autoload.php';
+require __DIR__ . '../vendor/autoload.php';
 
 // Create PHP-DI container builder
 $containerBuilder = new ContainerBuilder();
@@ -26,7 +26,7 @@ $container->set('config', function () {
 $app = Bridge::create($container);
 
 // Set base path to run the app in a subdirectory.    
-$app->setBasePath('/www/');
+$app->setBasePath('/www/API/');
 
 // Add body parsing middleware
 $app->addBodyParsingMiddleware();
