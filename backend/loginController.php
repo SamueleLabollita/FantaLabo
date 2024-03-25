@@ -23,12 +23,12 @@
             $_SESSION["username"] = $username;
             $row = $result->fetch_assoc();
             if($row["ruolo"] == "admin"){
-                header("Location: /www/adminpage.php");
+                header("Location: ../frontend/adminpage.php");
             }else{
-                header("Location: /www/userpage.php");
+                header("Location: ../frontend/userpage.php");
             }
         }else{
-            header("Location: /www/login.php");
+            header("Location: ../frontend/login.php");
             echo "Username o password errati";
         }
     }

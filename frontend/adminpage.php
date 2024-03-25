@@ -54,6 +54,21 @@ $username = $_SESSION["username"];
             button:hover {
                 background-color: lightblue;
             }
+
+            .logout {
+                color: #ffffff; /* Colore del testo */
+                background-color: #ff0000; /* Colore di sfondo */
+                text-decoration: none; /* Rimuove il sottolineamento */
+                padding: 10px 20px; /* Spazio intorno al testo */
+                border-radius: 5px; /* Angoli arrotondati */
+                font-size: 16px; /* Dimensione del testo */
+                display: inline-block; /* Permette di applicare padding e altre proprietà di blocco */
+                transition: background-color 0.3s ease; /* Effetto di transizione al passaggio del mouse */
+            }
+
+            .logout:hover {
+                background-color: #990000; /* Colore di sfondo al passaggio del mouse */
+            }
         </style>
     </head> 
     <body> 
@@ -61,9 +76,7 @@ $username = $_SESSION["username"];
             <div>
                 <span>Benvenuto, <?php echo $username; ?>!</span>
             </div>
-            <form action="logout.php" method="post"> 
-                <button type="submit">Logout</button>
-            </form>
+            <a href="../frontend/login.php" class="logout">Logout</a>
         </header>
         <h1>ADMIN PAGE</h1>
         <form action="creaCampionatoAdmin.php" method="post"> 

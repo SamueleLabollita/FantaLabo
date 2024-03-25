@@ -55,7 +55,7 @@
 <body>
     <div class="login-container">
         <h2>Accedi</h2>
-        <form action="loginController.php" method="POST">
+        <form action="../backend/loginController.php" method="POST">
             <label for="username">Username:</label>
             <input type="text" id="username" name="username" required>
 

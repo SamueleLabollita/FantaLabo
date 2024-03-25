@@ -16,7 +16,7 @@
         $sql = "INSERT INTO CAMPIONATO (nome_campionato) VALUES ('$nomeCampionato')";
         $result = $conn->query($sql);
         $conn->close();
-        header("Location: /www/adminpage.php");
+        header("Location: ../frontend/adminpage.php");
         exit();
     }
 ?>

@@ -1,4 +1,5 @@
 <?php
+    // crea campionato
     $servername = "localhost";
     $username = "root";
     $password = "";
@@ -10,13 +11,12 @@
         die("Connessione fallita: " . $conn->connect_error);
     }
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
-        $nome = $_POST["nome"];
-        $cognome = $_POST["cognome"];
-        $ruolo = $_POST["ruolo"];
+        $nomeCampionato = $_POST["nome_campionato"];
 
-        $sql = "INSERT INTO GIOCATORE (nome, cognome, ruolo) VALUES ('$nome', '$cognome', '$ruolo')";
+        $sql = "INSERT INTO CAMPIONATO (nome_campionato) VALUES ('$nomeCampionato')";
         $result = $conn->query($sql);
-        header("Location: /www/inserisciGiocatori.php");
         $conn->close();
+        header("Location: ../frontend/userpage.php");
+        exit();
     }
 ?>

@@ -1,30 +1,20 @@
-<?php 
-session_start(); 
-
-if (!isset($_SESSION["username"])) { 
-    header("Location: /www/login.php"); 
-    exit(); 
-} 
-
-$username = $_SESSION["username"]; 
-?>
 <!DOCTYPE html> 
 <html lang="en"> 
     <head> 
         <meta charset="UTF-8"> 
         <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-    <title>Registrazione campionato</title> 
+    <title>Inserimento giocatori</title> 
     <style> 
-        body {
-            font-family: Arial, sans-serif;
-            background-color: lightblue;
+        body { 
+            font-family: Arial, sans-serif; 
+            background-color: #0099ff; 
         }
-
         form {
-            width: 300px;
-            margin: 0 auto;
-            padding: 20px;
-            background-color: #333;
+                width: 300px;
+                margin: 0 auto;
+                padding: 20px;
+                background-color: #333;
+                text-align: center;
         }
 
         header {
@@ -39,13 +29,14 @@ $username = $_SESSION["username"];
 
         label {
             display: block;
-            margin-bottom: 5px;
+            margin-bottom: 10px;
             color: #fff;
         }
 
         input[type="text"],
         input[type="email"],
         input[type="password"],
+        
         input[type="submit"] {
             width: 100%;
             padding: 8px;
@@ -54,7 +45,11 @@ $username = $_SESSION["username"];
             margin-bottom: 10px;
             box-sizing: border-box;
         }
+        
 
+        input[type="submit"]:hover {
+            background-color: white;
+        }
 
         button {
             background-color: grey;
@@ -73,16 +68,21 @@ $username = $_SESSION["username"];
     </head> 
     <body> 
         <header>
-            <form action="userpage.php" method="post"> 
+            <form action="adminpage.php" method="post"> 
                 <button type="submit">Home</button>
             </form>
-            <form action="logout.php" method="post"> 
-                <button type="submit">Logout</button>
-            </form>
         </header>
-        <form method="post" action="creaCampionatoUserController.php"> 
-            <label for="nome">Nome Campionato:</label> <input type="text" name="nome_campionato" required> <br> 
-            <input type="submit" value="CREA"> 
+        <form method="post" action="../backend/inserimentoController.php"> 
+            <label for="nome">Nome giocatore:</label> <input type="text" name="nome" required> <br> 
+            <label for="cognome">Cognome:</label> <input type="text" name="cognome" required> <br> 
+            <!--<label for="ruolo">ruolo</label> <input type="text" name="ruolo" required> <br> -->
+            <label for="ruolo">Seleziona il ruolo</label>
+            <select id="ruolo" name="ruolo">
+                <option value="Portiere">Portiere</option>
+                <option value="Difensore">Difensore</option>
+                <option value="Centrocampista">Centrocampista</option>
+                <option value="Attaccante">Attaccante</option>
+            <input type="submit" value="Registra giocatore"> 
         </form> 
     </body> 
 </html>

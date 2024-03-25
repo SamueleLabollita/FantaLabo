@@ -59,18 +59,31 @@
             button:hover {
                 background-color: lightgrey;
             }
+
+            .logout {
+                color: #ffffff; /* Colore del testo */
+                background-color: #ff0000; /* Colore di sfondo */
+                text-decoration: none; /* Rimuove il sottolineamento */
+                padding: 10px 20px; /* Spazio intorno al testo */
+                border-radius: 5px; /* Angoli arrotondati */
+                font-size: 16px; /* Dimensione del testo */
+                display: inline-block; /* Permette di applicare padding e altre proprietà di blocco */
+                transition: background-color 0.3s ease; /* Effetto di transizione al passaggio del mouse */
+            }
+
+            .logout:hover {
+                background-color: #990000; /* Colore di sfondo al passaggio del mouse */
+            }
         </style>
     </head> 
     <body> 
         <header>
-            <form action="adminpage.php" method="post"> 
+            <form action="../frontend/adminpage.php" method="post"> 
                 <button type="submit">Home</button>
             </form>
-            <form action="logout.php" method="post"> 
-                <button type="submit">Logout</button>
-            </form>
+            <a href="../frontend/login.php" class="logout">Logout</a>
         </header>
-        <form method="post" action="creaCampionatoAdminController.php"> 
+        <form method="post" action="../backend/creaCampionatoAdminController.php"> 
             <label for="nome">Nome Campionato:</label> <input type="text" name="nome_campionato" required> <br> 
             <input type="submit" value="CREA"> 
         </form> 

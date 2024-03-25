@@ -4,7 +4,7 @@ if (isset($_SESSION["username"])){
     header("Location: userpage.php");
     exit();
 } else {
-    header("Location: registrazione.php");
+    header("Location: frontend/registrazione.php");
     exit();
 }
 ?>

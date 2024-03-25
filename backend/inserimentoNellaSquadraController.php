@@ -23,10 +23,10 @@
 
         if ($resultUpdateGiocatore) {
             $successMessage = "Giocatore inserito nella squadra con successo!";
-            header("Location: /www/inserisciGiocatoriNellaSquadra.php?successMessage=" . urlencode($successMessage));
+            header("Location: ../frontend/inserisciGiocatoriNellaSquadra.php?successMessage=" . urlencode($successMessage));
         } else {
             $errorMessage = "Errore nell'inserimento del giocatore nella squadra: " . $conn->error;
-            header("Location: /www/inserisciGiocatoriNellaSquadra.php?errorMessage=" . urlencode($errorMessage));
+            header("Location: ../frontend/inserisciGiocatoriNellaSquadra.php?errorMessage=" . urlencode($errorMessage));
         }
         $conn->close();
     }

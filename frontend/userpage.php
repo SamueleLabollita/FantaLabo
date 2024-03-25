@@ -83,9 +83,7 @@ if ($result->num_rows > 0) {
             <div>
                 <span>Benvenuto, <?php echo $username; ?>!</span>
             </div>
-            <form action="logout.php" method="post"> 
-                <button type="submit">Logout</button>
-            </form>
+            <a href="../frontend/login.php">Logout</a>
             <div>
                 <span>La tua squadra: <?php echo $squadra; ?></span>
             </div>

@@ -42,7 +42,7 @@
     </style>
     </head> 
     <body> 
-        <form method="post" action="registrazioneController.php"> 
+        <form method="post" action="../backend/registrazioneController.php"> 
             <label for="nome">Nome:</label> <input type="text" name="nome" required> <br> 
             <label for="cognome">Cognome:</label> <input type="text" name="cognome" required> <br> 
             <label for="username">Username:</label> <input type="text" name="username" required> <br> 

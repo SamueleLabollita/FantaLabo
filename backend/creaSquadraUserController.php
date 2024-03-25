@@ -12,7 +12,7 @@
     }
     session_start();
     if (!isset($_SESSION["username"])) { 
-        header("Location: /www/login.php"); 
+        header("Location: ../frontend/login.php"); 
         exit(); 
     } 
     
@@ -29,7 +29,7 @@
         $sql2 = "UPDATE UTENTE SET squadra_posseduta = '$nomeSquadra' WHERE username = '$username'";
         $result2 = $conn->query($sql2);
         $_SESSION["id"] = $conn->insert_id;
-        header("Location: /www/userpage.php");
+        header("Location: ../frontend/userpage.php");
         $conn->close();
     }
 ?>
