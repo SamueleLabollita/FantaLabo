@@ -76,7 +76,7 @@ $username = $_SESSION["username"];
             <div>
                 <span>Benvenuto, <?php echo $username; ?>!</span>
             </div>
-            <a href="../frontend/login.php" class="logout">Logout</a>
+            <a href="../backend/logout.php" class="logout">Logout</a>
         </header>
         <h1>ADMIN PAGE</h1>
         <form action="creaCampionatoAdmin.php" method="post"> 

@@ -95,7 +95,7 @@ $resultPort = $conn->query($sqlPort);
             <form action="userpage.php" method="post"> 
                 <button type="submit">Home</button>
             </form>
-            <a href="../frontend/login.php" class="logout">Logout</a>
+            <a href="../backend/logout.php" class="logout">Logout</a>
         </header>
         <form>
             <label for="giocatore">Scegli il portiere</label>

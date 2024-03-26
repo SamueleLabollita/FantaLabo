@@ -119,7 +119,7 @@ $result = mysqli_query($conn, $query);
             <form action="adminpage.php" method="post"> 
                 <button type="submit">Home</button>
             </form>
-            <a href="../frontend/login.php" class="logout">Logout</a>
+            <a href="../backend/logout.php" class="logout">Logout</a>
         </header>
         <h1>Visualizzazione giocatori</h1>
         <form action="" method="post">

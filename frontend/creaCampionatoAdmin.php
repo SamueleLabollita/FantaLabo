@@ -81,7 +81,7 @@
             <form action="../frontend/adminpage.php" method="post"> 
                 <button type="submit">Home</button>
             </form>
-            <a href="../frontend/login.php" class="logout">Logout</a>
+            <a href="../backend/logout.php" class="logout">Logout</a>
         </header>
         <form method="post" action="../backend/creaCampionatoAdminController.php"> 
             <label for="nome">Nome Campionato:</label> <input type="text" name="nome_campionato" required> <br> 

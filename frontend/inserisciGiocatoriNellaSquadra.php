@@ -93,7 +93,7 @@
             <form action="adminpage.php" method="post"> 
                 <button type="submit">Home</button>
             </form>
-            <a href="../frontend/login.php" class="logout">Logout</a>
+            <a href="../backend/logout.php" class="logout">Logout</a>
         </header>
         <form method="post" action="../backend/inserimentoNellaSquadraController.php"> 
             <label for="giocatore">Seleziona il giocatore</label>

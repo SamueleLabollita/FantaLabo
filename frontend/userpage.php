@@ -76,6 +76,21 @@ if ($result->num_rows > 0) {
             button:hover {
                 background-color: lightgreen;
             }
+
+            .logout {
+                color: #ffffff; /* Colore del testo */
+                background-color: #ff0000; /* Colore di sfondo */
+                text-decoration: none; /* Rimuove il sottolineamento */
+                padding: 10px 20px; /* Spazio intorno al testo */
+                border-radius: 5px; /* Angoli arrotondati */
+                font-size: 16px; /* Dimensione del testo */
+                display: inline-block; /* Permette di applicare padding e altre proprietà di blocco */
+                transition: background-color 0.3s ease; /* Effetto di transizione al passaggio del mouse */
+            }
+
+            .logout:hover {
+                background-color: #990000; /* Colore di sfondo al passaggio del mouse */
+            }
         </style>
     </head> 
     <body> 
@@ -83,7 +98,7 @@ if ($result->num_rows > 0) {
             <div>
                 <span>Benvenuto, <?php echo $username; ?>!</span>
             </div>
-            <a href="../frontend/login.php">Logout</a>
+            <a href="../backend/logout.php" class="logout">Logout</a>
             <div>
                 <span>La tua squadra: <?php echo $squadra; ?></span>
             </div>
