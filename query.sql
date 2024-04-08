@@ -1,3 +1,6 @@
+DROP DATABASE IF EXISTS FantaLabo;
+CREATE DATABASE FantaLabo;
+USE FantaLabo;
 
 CREATE TABLE UTENTE ( 
     id INT AUTO_INCREMENT PRIMARY KEY,
@@ -6,7 +9,8 @@ CREATE TABLE UTENTE (
     cognome VARCHAR(255), 
     ruolo VARCHAR(255),
     username VARCHAR(255),
-    squadra VARCHAR(255)  
+    password VARCHAR(255),
+    SQUADRA_posseduta VARCHAR(255)  
 );
 
 CREATE TABLE CAMPIONATO ( 
@@ -25,8 +29,8 @@ CREATE TABLE GIOCATORE (
     id INT AUTO_INCREMENT PRIMARY KEY, 
     nome VARCHAR(255), 
     cognome VARCHAR(255), 
-    SQUADRA_id VARCHAR(255), 
-    FOREIGN KEY (SQUADRA_id) REFERENCES SQUADRA(nome_squadra),
+    SQUADRA_nome VARCHAR(255), 
+    FOREIGN KEY (SQUADRA_nome) REFERENCES SQUADRA(nome_squadra),
     ruolo VARCHAR(255)
 );
 
@@ -35,7 +39,7 @@ CREATE TABLE GIOCA (
     SQUADRA_id VARCHAR(255), 
     PRIMARY KEY (GIOCATORE_id, SQUADRA_id), 
     FOREIGN KEY (GIOCATORE_id) REFERENCES GIOCATORE(id), 
-    FOREIGN KEY (SQUADRA_id) REFERENCES SQUADRA(nome_squadra) 
+    FOREIGN KEY (SQUADRA_nome) REFERENCES SQUADRA(nome_squadra) 
 );
 
 CREATE TABLE PARTITA ( 
@@ -49,14 +53,12 @@ CREATE TABLE PARTITA (
     FOREIGN KEY (squadra_casa) REFERENCES SQUADRA(nome_squadra), 
     FOREIGN KEY (squadra_ospite) REFERENCES SQUADRA(nome_squadra) 
 );
---inserimento del admin
-INSERT INTO UTENTE (id, Email, nome, cognome, ruolo, username, password) VALUES (NULL, 'admin@gmail.com', 'admin', 'admin', 'admin', 'ad', '28a387778982f9aa3634dc93435c4052');
---credenziali admin
---USERNAME: ad
---PASSWORD: ad01
 
---inserimento campionato
+INSERT INTO UTENTE (id, Email, nome, cognome, ruolo, username, password) VALUES (NULL, 'admin@gmail.com', 'admin', 'admin', 'admin', 'ad', '28a387778982f9aa3634dc93435c4052');
+INSERT INTO UTENTE (id, Email, nome, cognome, ruolo, username, password) VALUES (NULL, 'admin@gmail.com', 'aa', 'aa', 'utente', 'aa', '4124bc0a9335c27f086f24ba207a4912');
+
+
 INSERT INTO `CAMPIONATO` (`id`, `nome_campionato`) VALUES (NULL, 'Champions League');
 
---inserimento squadre
+
 INSERT INTO `SQUADRA` (`nome_squadra`, `colori`, `id`) VALUES ('I maghi', 'Bianco', NULL);
