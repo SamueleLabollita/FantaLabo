@@ -49,17 +49,7 @@ Schermata inserimento giocatori
 
 ![image](https://github.com/SamueleLabollita/FantaLabo/assets/101709291/0cb1fe5d-6ac2-4418-a4c4-90d985c32e24)
 
-Schermata partita
 
-![image](https://github.com/SamueleLabollita/FantaLabo/assets/101709291/5baf6509-ff00-42c0-a8ba-5a846f2c266f)
-
-schermata risultati
-
-![image](https://github.com/SamueleLabollita/FantaLabo/assets/101709291/35f127c4-3878-4c75-bc10-6877032b97cc)
-
-schermata classifica
-
-![image](https://github.com/SamueleLabollita/FantaLabo/assets/101709291/62d6b637-6782-4d46-8b20-6b8fe6f903bb)
 
 # PREREQUISITI
 
