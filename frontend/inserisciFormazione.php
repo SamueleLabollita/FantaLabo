@@ -99,7 +99,7 @@ $resultPort = $conn->query($sqlPort);
         </header>
         <form>
             <label for="giocatore">Scegli il portiere</label>
-            <select name="giocatore" id="giocatore">
+            <select name="giocatore" id="portiere">
                 <?php 
                 if ($resultPort->num_rows > 0) {
                     while($row = $resultPort->fetch_assoc()) {
@@ -112,10 +112,9 @@ $resultPort = $conn->query($sqlPort);
             </select>
             <br>
             <br>
-            <?php 
-                for($i=0;$i<4;$i++) {
-                    echo "<label for='giocatore'>Scegli il ". $i+1 ."° difensore</label>
-                    <select name='giocatore' id='giocatore'>";
+            <label for="giocatore">Scegli il primo difensore</label>
+            <select name="giocatore" id="difensore1">
+                <?php 
                     $sqlDif = "SELECT nome, cognome, ruolo FROM GIOCATORE WHERE SQUADRA_nome = '$squadra' AND ruolo = 'Difensore'";
                     $resultDif = $conn->query($sqlDif);
                     if ($resultDif->num_rows > 0) {
@@ -125,13 +124,61 @@ $resultPort = $conn->query($sqlPort);
                     } else {
                         echo "0 results";
                     }
-                    echo "</select>
-                    <br>
-                    <br>";
-                }
-                for($i=0;$i<3;$i++) {
-                    echo "<label for='giocatore'>Scegli il ". $i+1 ."° centrocampista</label>
-                    <select name='giocatore' id='giocatore'>";
+                ?>
+            </select>
+            <br>
+            <br>
+            <label for="giocatore">Scegli il secondo difensore</label>
+            <select name="giocatore" id="difensore2">
+                <?php 
+                    $sqlDif = "SELECT nome, cognome, ruolo FROM GIOCATORE WHERE SQUADRA_nome = '$squadra' AND ruolo = 'Difensore'";
+                    $resultDif = $conn->query($sqlDif);
+                    if ($resultDif->num_rows > 0) {
+                        while($row = $resultDif->fetch_assoc()) {
+                            echo "<option value='" . $row["nome"] . "'>" . $row["nome"] . " " . $row["cognome"] . " (" . $row["ruolo"] . ")</option>";
+                        }
+                    } else {
+                        echo "0 results";
+                    }
+                ?>
+            </select>
+            <br>
+            <br>
+            <label for="giocatore">Scegli il terzo difensore</label>
+            <select name="giocatore" id="difensore3">
+                <?php 
+                    $sqlDif = "SELECT nome, cognome, ruolo FROM GIOCATORE WHERE SQUADRA_nome = '$squadra' AND ruolo = 'Difensore'";
+                    $resultDif = $conn->query($sqlDif);
+                    if ($resultDif->num_rows > 0) {
+                        while($row = $resultDif->fetch_assoc()) {
+                            echo "<option value='" . $row["nome"] . "'>" . $row["nome"] . " " . $row["cognome"] . " (" . $row["ruolo"] . ")</option>";
+                        }
+                    } else {
+                        echo "0 results";
+                    }
+                ?>
+            </select>
+            <br>
+            <br>
+            <label for="giocatore">Scegli il quarto difensore</label>
+            <select name="giocatore" id="difensore4">
+                <?php 
+                    $sqlDif = "SELECT nome, cognome, ruolo FROM GIOCATORE WHERE SQUADRA_nome = '$squadra' AND ruolo = 'Difensore'";
+                    $resultDif = $conn->query($sqlDif);
+                    if ($resultDif->num_rows > 0) {
+                        while($row = $resultDif->fetch_assoc()) {
+                            echo "<option value='" . $row["nome"] . "'>" . $row["nome"] . " " . $row["cognome"] . " (" . $row["ruolo"] . ")</option>";
+                        }
+                    } else {
+                        echo "0 results";
+                    }
+                ?>
+            </select>
+            <br>
+            <br>
+            <label for="giocatore">Scegli il primo centrocampista</label>
+            <select name="giocatore" id="centrocampista1">
+                <?php 
                     $sqlCen = "SELECT nome, cognome, ruolo FROM GIOCATORE WHERE SQUADRA_nome = '$squadra' AND ruolo = 'Centrocampista'";
                     $resultCen = $conn->query($sqlCen);
                     if ($resultCen->num_rows > 0) {
@@ -141,13 +188,45 @@ $resultPort = $conn->query($sqlPort);
                     } else {
                         echo "0 results";
                     }
-                    echo "</select>
-                    <br>
-                    <br>";
-                }
-                for($i=0;$i<3;$i++) {
-                    echo "<label for='giocatore'>Scegli il ". $i+1 ."° attaccante</label>
-                    <select name='giocatore' id='giocatore'>";
+                ?>
+            </select>
+            <br>
+            <br>
+            <label for="giocatore">Scegli il secondo centrocampista</label>
+            <select name="giocatore" id="centrocampista2">
+                <?php 
+                    $sqlCen = "SELECT nome, cognome, ruolo FROM GIOCATORE WHERE SQUADRA_nome = '$squadra' AND ruolo = 'Centrocampista'";
+                    $resultCen = $conn->query($sqlCen);
+                    if ($resultCen->num_rows > 0) {
+                        while($row = $resultCen->fetch_assoc()) {
+                            echo "<option value='" . $row["nome"] . "'>" . $row["nome"] . " " . $row["cognome"] . " (" . $row["ruolo"] . ")</option>";
+                        }
+                    } else {
+                        echo "0 results";
+                    }
+                ?>
+            </select>
+            <br>
+            <br>
+            <label for="giocatore">Scegli il terzo centrocampista</label>
+            <select name="giocatore" id="centrocampista3">
+                <?php 
+                    $sqlCen = "SELECT nome, cognome, ruolo FROM GIOCATORE WHERE SQUADRA_nome = '$squadra' AND ruolo = 'Centrocampista'";
+                    $resultCen = $conn->query($sqlCen);
+                    if ($resultCen->num_rows > 0) {
+                        while($row = $resultCen->fetch_assoc()) {
+                            echo "<option value='" . $row["nome"] . "'>" . $row["nome"] . " " . $row["cognome"] . " (" . $row["ruolo"] . ")</option>";
+                        }
+                    } else {
+                        echo "0 results";
+                    }
+                ?>
+            </select>
+            <br>
+            <br>
+            <label for="giocatore">Scegli il primo attaccante</label>
+            <select name="giocatore" id="attaccante1">
+                <?php 
                     $sqlAtt = "SELECT nome, cognome, ruolo FROM GIOCATORE WHERE SQUADRA_nome = '$squadra' AND ruolo = 'Attaccante'";
                     $resultAtt = $conn->query($sqlAtt);
                     if ($resultAtt->num_rows > 0) {
@@ -157,11 +236,43 @@ $resultPort = $conn->query($sqlPort);
                     } else {
                         echo "0 results";
                     }
-                    echo "</select>
-                    <br>
-                    <br>";
-                }
-            ?>
+                ?>
+            </select>
+            <br>
+            <br>
+            <label for="giocatore">Scegli il secondo attaccante</label>
+            <select name="giocatore" id="attaccante2">
+                <?php 
+                    $sqlAtt = "SELECT nome, cognome, ruolo FROM GIOCATORE WHERE SQUADRA_nome = '$squadra' AND ruolo = 'Attaccante'";
+                    $resultAtt = $conn->query($sqlAtt);
+                    if ($resultAtt->num_rows > 0) {
+                        while($row = $resultAtt->fetch_assoc()) {
+                            echo "<option value='" . $row["nome"] . "'>" . $row["nome"] . " " . $row["cognome"] . " (" . $row["ruolo"] . ")</option>";
+                        }
+                    } else {
+                        echo "0 results";
+                    }
+                ?>
+            </select>
+            <br>
+            <br>
+            <label for="giocatore">Scegli il terzo attaccante</label>
+            <select name="giocatore" id="attaccante3">
+                <?php 
+                    $sqlAtt = "SELECT nome, cognome, ruolo FROM GIOCATORE WHERE SQUADRA_nome = '$squadra' AND ruolo = 'Attaccante'";
+                    $resultAtt = $conn->query($sqlAtt);
+                    if ($resultAtt->num_rows > 0) {
+                        while($row = $resultAtt->fetch_assoc()) {
+                            echo "<option value='" . $row["nome"] . "'>" . $row["nome"] . " " . $row["cognome"] . " (" . $row["ruolo"] . ")</option>";
+                        }
+                    } else {
+                        echo "0 results";
+                    }
+                ?>
+            </select>
         </form>
+        <form action="../backend/inivaFormazioneController.php" method="post"> 
+                <button type="submit">Invia</button>
+            </form>
     </body>
 </html>
