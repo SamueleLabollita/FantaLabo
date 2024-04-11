@@ -36,8 +36,8 @@ CREATE TABLE GIOCATORE (
 
 CREATE TABLE GIOCA ( 
     GIOCATORE_id INT, 
-    SQUADRA_id VARCHAR(255), 
-    PRIMARY KEY (GIOCATORE_id, SQUADRA_id), 
+    SQUADRA_nome VARCHAR(255), 
+    PRIMARY KEY (GIOCATORE_id, SQUADRA_nome), 
     FOREIGN KEY (GIOCATORE_id) REFERENCES GIOCATORE(id), 
     FOREIGN KEY (SQUADRA_nome) REFERENCES SQUADRA(nome_squadra) 
 );
@@ -54,11 +54,14 @@ CREATE TABLE PARTITA (
     FOREIGN KEY (squadra_ospite) REFERENCES SQUADRA(nome_squadra) 
 );
 
-INSERT INTO UTENTE (id, Email, nome, cognome, ruolo, username, password) VALUES (NULL, 'admin@gmail.com', 'admin', 'admin', 'admin', 'ad', '28a387778982f9aa3634dc93435c4052');
-INSERT INTO UTENTE (id, Email, nome, cognome, ruolo, username, password) VALUES (NULL, 'admin@gmail.com', 'aa', 'aa', 'utente', 'aa', '4124bc0a9335c27f086f24ba207a4912');
-
-
 INSERT INTO `CAMPIONATO` (`id`, `nome_campionato`) VALUES (NULL, 'Champions League');
 
+INSERT INTO `SQUADRA` (`nome_squadra`, `colori`, `id`) VALUES ('I maghi', 'Bianco', 1);
+INSERT INTO `SQUADRA` (`nome_squadra`, `colori`, `id`) VALUES ('Dea', 'Neroblu', 1);
 
-INSERT INTO `SQUADRA` (`nome_squadra`, `colori`, `id`) VALUES ('I maghi', 'Bianco', NULL);
+INSERT INTO UTENTE (id, Email, nome, cognome, ruolo, username, password) VALUES (NULL, 'admin@gmail.com', 'admin', 'admin', 'admin', 'ad', '28a387778982f9aa3634dc93435c4052');
+INSERT INTO UTENTE (id, Email, nome, cognome, ruolo, username, password, SQUADRA_posseduta) VALUES (NULL, 'aa@gmail.com', 'aa', 'aa', 'utente', 'aa', '4124bc0a9335c27f086f24ba207a4912', 'I maghi');
+INSERT INTO UTENTE (id, Email, nome, cognome, ruolo, username, password, SQUADRA_posseduta) VALUES (NULL, 'bb@gmail.com', 'bb', 'bb', 'utente', 'bb', '21ad0bd836b90d08f4cf640b4c298e7c', 'Dea');
+
+
+
