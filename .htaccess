@@ -4,6 +4,15 @@ RewriteEngine on
 # Replace /www with / if your application is at the root of your domain
 RewriteBase /www
 
+RewriteRule ^API/utenti/(\d+)/?$ utenti.php?id=$1 [L]
+
+# Reindirizzamento per DatiUtente.php
+RewriteRule ^API/utenti/?$ utenti.php [L]
+
+RewriteRule ^API/utenti/(\d+)/rosa/?$ rosa.php?id=$1 [L]
+
+RewriteRule ^API/utenti/rosa/?$ rosa.php [L]
+
 # If the request is for the root directory
 RewriteRule ^$ public/ [L]
 

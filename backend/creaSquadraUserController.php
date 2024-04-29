@@ -17,6 +17,7 @@
     } 
     
     $username = $_SESSION["username"]; 
+    
 
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $nomeSquadra = $_POST["nomeSquadra"];

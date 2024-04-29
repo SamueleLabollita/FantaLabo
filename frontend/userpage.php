@@ -106,10 +106,6 @@ if ($result->num_rows > 0) {
         <h1>Home</h1>
         <?php
             if (empty($squadra)) {
-                echo '<form action="creaCampionatoUser.php" method="post"> 
-                <button type="submit">Crea campionato</button>
-                </form>';
-
                 echo '<form action="creaSquadraUser.php" method="post"> 
                         <button type="submit">Crea squadra</button>
                     </form>';
