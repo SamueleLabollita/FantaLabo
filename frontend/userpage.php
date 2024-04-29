@@ -104,12 +104,18 @@ if ($result->num_rows > 0) {
             </div>
         </header>
         <h1>Home</h1>
-        <form action="creaCampionatoUser.php" method="post"> 
-            <button type="submit">Crea campionato</button>
-        </form>
-        <form action="creaSquadraUser.php" method="post"> 
-            <button type="submit">Crea squadra</button>
-        </form>
+        <?php
+            if (empty($squadra)) {
+                echo '<form action="creaCampionatoUser.php" method="post"> 
+                <button type="submit">Crea campionato</button>
+                </form>';
+
+                echo '<form action="creaSquadraUser.php" method="post"> 
+                        <button type="submit">Crea squadra</button>
+                    </form>';
+            }
+        ?>
+
         <form action="inserisciFormazione.php" method="post"> 
             <button type="submit">Inserisci Formazione</button>
         </form>
