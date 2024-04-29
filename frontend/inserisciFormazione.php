@@ -271,7 +271,7 @@ $resultPort = $conn->query($sqlPort);
                 ?>
             </select>
         </form>
-        <form action="../backend/inivaFormazioneController.php" method="post"> 
+        <form action="../backend/inviaFormazioneController.php" method="post"> 
                 <button type="submit">Invia</button>
             </form>
     </body>
