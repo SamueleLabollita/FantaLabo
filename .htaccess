@@ -1,26 +1,22 @@
 RewriteEngine on
 
-# If the application is not in the root directory
-# Replace /www with / if your application is at the root of your domain
+# Se l'applicazione non è nella directory radice
+# Sostituisci /www con / se la tua applicazione è nella radice del dominio
 RewriteBase /www
 
 RewriteRule ^API/utenti/(\d+)/?$ utenti.php?id=$1 [L]
-
-# Reindirizzamento per DatiUtente.php
 RewriteRule ^API/utenti/?$ utenti.php [L]
-
 RewriteRule ^API/utenti/(\d+)/rosa/?$ rosa.php?id=$1 [L]
-
 RewriteRule ^API/utenti/rosa/?$ rosa.php [L]
 
-# If the request is for the root directory
+# Se la richiesta è per la directory radice
 RewriteRule ^$ public/ [L]
 
-# If the request is for a file or directory that exists
+# Se la richiesta è per un file o una directory esistente
 RewriteCond %{REQUEST_FILENAME} -f [OR]
 RewriteCond %{REQUEST_FILENAME} -d
-# Do not redirect the request
+# Non reindirizzare la richiesta
 RewriteRule ^ - [L]
 
-# If the request is for a file or directory that does not exist
+# Se la richiesta è per un file o una directory che non esiste
 RewriteRule ^(.*)$ public/index.php [L]

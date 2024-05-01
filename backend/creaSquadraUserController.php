@@ -18,6 +18,15 @@
     
     $username = $_SESSION["username"]; 
     
+    // Verifica se l'utente possiede già una squadra
+    $check_query = "SELECT squadra_posseduta FROM UTENTE WHERE username = '$username'";
+    $check_result = $conn->query($check_query);
+    $row = $check_result->fetch_assoc();
+    if ($row["squadra_posseduta"]) {
+        // Se l'utente possiede già una squadra, reindirizzalo alla pagina dell'utente
+        header("Location: ../frontend/userpage.php"); 
+        exit();
+    }
 
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $nomeSquadra = $_POST["nomeSquadra"];
